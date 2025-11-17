@@ -30,7 +30,7 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="AnimatableBody2D" type="AnimatableBody2D"]
+[node name="AnimatableBody2D" type="CustomAnimatableBody2D"]
 script = ExtResource("1_wh0le")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
