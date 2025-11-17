@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4h4hlliht2j1"]
+
+[ext_resource type="Script" uid="uid://cvxd02jfhwl0p" path="res://scripts/extra_jump_powerup.gd" id="1_wh0le"]
+[ext_resource type="Texture2D" uid="uid://tosnyj0a3t3n" path="res://assets/Heart-test-Sheet.png" id="2_6cuax"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to7bl"]
+atlas = ExtResource("2_6cuax")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu7g1"]
+atlas = ExtResource("2_6cuax")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iuyn8"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to7bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu7g1")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 3.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_wh0le")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iuyn8")
+animation = &"new_animation"
+frame_progress = 0.23383856

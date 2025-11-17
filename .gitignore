@@ -1,0 +1,20 @@
+## Godot-specific ignores
+/.import/
+/.godot/
+export_presets.cfg
+*.import
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary/editor
+/.cache/
+/.local/
+
+# Python virtual envs
+venv/
+env/
+
+# Node modules
+node_modules/
