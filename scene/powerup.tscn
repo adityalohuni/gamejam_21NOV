@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4h4hlliht2j1"]
+[gd_scene load_steps=6 format=3 uid="uid://cfji6po125k78"]
 
-[ext_resource type="Script" uid="uid://cvxd02jfhwl0p" path="res://scripts/extra_jump_powerup.gd" id="1_wh0le"]
+[ext_resource type="Script" uid="uid://cvxd02jfhwl0p" path="res://scripts/animatable_body_2d.gd" id="1_wh0le"]
 [ext_resource type="Texture2D" uid="uid://tosnyj0a3t3n" path="res://assets/Heart-test-Sheet.png" id="2_6cuax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_to7bl"]

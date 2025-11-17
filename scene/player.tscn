@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cgth5oormetak"]
 
-[ext_resource type="Script" uid="uid://bfbk2s5bc0e3f" path="res://scripts/player.gd" id="1_hjaqi"]
+[ext_resource type="Script" uid="uid://bfbk2s5bc0e3f" path="res://player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://dteu1nwksi57a" path="res://assets/Character-test-Sheet.png" id="2_fvtld"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ct4mp"]

@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="gamejam_21NOV"
-run/main_scene="res://scenes/game.tscn"
+config/name="gamejam_Nov21"
+run/main_scene="uid://cq00bdd0f44ow"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
