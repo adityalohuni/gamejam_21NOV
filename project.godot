@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="gamejam_Nov21"
+config/name="Новый игровой проект"
 run/main_scene="uid://cq00bdd0f44ow"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=1152
 
 [rendering]
 

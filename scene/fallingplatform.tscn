@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://64br6qu04v7d"]
+
+[ext_resource type="Texture2D" uid="uid://yntne2mxlp7h" path="res://assets/sprites/Tileset-mountain-Sheet.png" id="1_j8msw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk4po"]
+size = Vector2(7.4188495, 0.006630973)
+
+[node name="fallingplatform" type="Sprite2D"]
+texture = ExtResource("1_j8msw")
+region_enabled = true
+region_rect = Rect2(0, 55, 48, 9)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -2.75)
+scale = Vector2(6.470006, 527.82605)
+shape = SubResource("RectangleShape2D_qk4po")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfji6po125k78"]
 
 [ext_resource type="Script" uid="uid://cvxd02jfhwl0p" path="res://scripts/animatable_body_2d.gd" id="1_wh0le"]
-[ext_resource type="Texture2D" uid="uid://tosnyj0a3t3n" path="res://assets/Heart-test-Sheet.png" id="2_6cuax"]
+[ext_resource type="Texture2D" uid="uid://tosnyj0a3t3n" path="res://assets/sprites/Heart-test-Sheet.png" id="2_6cuax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_to7bl"]
 atlas = ExtResource("2_6cuax")
@@ -30,7 +30,7 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="AnimatableBody2D" type="CustomAnimatableBody2D"]
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
 script = ExtResource("1_wh0le")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
