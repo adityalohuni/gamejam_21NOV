@@ -1,10 +1,16 @@
-[gd_scene load_steps=17 format=4 uid="uid://cq00bdd0f44ow"]
+[gd_scene load_steps=23 format=4 uid="uid://cq00bdd0f44ow"]
 
 [ext_resource type="PackedScene" uid="uid://ba4k4se81w0tc" path="res://scene/Platform.tscn" id="1_p1ry8"]
+[ext_resource type="Texture2D" uid="uid://5ijb5vrahij3" path="res://82d6afe9-14a6-487f-85df-a67f1d7bd9de.png" id="1_ym5sv"]
+[ext_resource type="Texture2D" uid="uid://c3gig4qhwi7nt" path="res://parallax/parallax-00.png" id="1_yq8tf"]
 [ext_resource type="PackedScene" uid="uid://cgth5oormetak" path="res://scene/player.tscn" id="2_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://ccs2omv43y73h" path="res://parallax/parallax-01.png" id="2_ym5sv"]
 [ext_resource type="Texture2D" uid="uid://j5m2i2rhatqd" path="res://assets/sprites/Tileset-test-Sheet.png" id="3_qpk70"]
+[ext_resource type="Texture2D" uid="uid://baeupd6lf2036" path="res://parallax/parallax-02.png" id="3_sng2h"]
+[ext_resource type="Texture2D" uid="uid://vwyorfayqij" path="res://parallax/parallax-03.png" id="4_5g16k"]
 [ext_resource type="Texture2D" uid="uid://kcbt34cb7pji" path="res://assets/sprites/Tileset-trees-Sheet.png" id="4_ll5lq"]
 [ext_resource type="Texture2D" uid="uid://yntne2mxlp7h" path="res://assets/sprites/Tileset-mountain-Sheet.png" id="5_17rxn"]
+[ext_resource type="Texture2D" uid="uid://6vjn5v3pd8aq" path="res://parallax/parallax-04.png" id="5_81276"]
 
 [sub_resource type="Animation" id="Animation_ryrav"]
 length = 3.0
@@ -342,6 +348,44 @@ _data = {
 [node name="Lololololo" type="AudioStreamPlayer" parent="."]
 autoplay = true
 
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_offset = Vector2(392, -231)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2/ParallaxLayer"]
+position = Vector2(-268, 142)
+scale = Vector2(0.4609375, 0.4609375)
+texture = ExtResource("1_ym5sv")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer"]
+texture = ExtResource("1_yq8tf")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+texture = ExtResource("2_ym5sv")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer3"]
+texture = ExtResource("3_sng2h")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer4"]
+texture = ExtResource("4_5g16k")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer5"]
+texture = ExtResource("5_81276")
+
 [node name="AnimatableBody2D4" parent="." instance=ExtResource("1_p1ry8")]
 position = Vector2(1760, -450)
 
@@ -353,6 +397,7 @@ libraries = {
 autoplay = "RESET"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_xlg7c")]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, -6)

@@ -1,13 +1,6 @@
 extends Control
 
 
-func _on_go_to_main_menu_pressed() -> void:
-	# Ensure the tree is unpaused then go to main menu scene.
-	get_tree().paused = false
-	# Adjust the path below if your main menu scene is at a different location.
-	# Godot 4: use change_scene_to_file
-	get_tree().change_scene_to_file("res://scene/main_menu.tscn")
-
 func _ready() -> void:
 	# When this scene is loaded on its own (game over scene), show the UI.
 	# If you use this as an overlay inside the game scene, you can call
@@ -23,3 +16,10 @@ func show_game_over() -> void:
 	# If you want the game to stop when showing the Game Over UI, handle
 	# pausing in the scene that calls `show_game_over()` (for example, disable
 	# player processing or physics there).
+
+
+func _on_menu_button_pressed() -> void:
+	get_tree().paused = false
+	# Adjust the path below if your main menu scene is at a different location.
+	# Godot 4: use change_scene_to_file
+	get_tree().change_scene_to_file("res://scene/main_menu.tscn")

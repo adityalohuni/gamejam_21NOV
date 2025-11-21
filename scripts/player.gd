@@ -1,4 +1,6 @@
 extends CharacterBody2D
+@onready var character_body_2d: CharacterBody2D = $"."
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 @export var speed: float = 150.0
@@ -68,6 +70,8 @@ func _physics_process(delta: float) -> void:
 	# Horizontal movement
 	if direction:
 		velocity.x = direction * speed
+		
+		animated_sprite_2d.flip_h = true if (velocity.x < 0)  else false
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
