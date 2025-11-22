@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckfuymgxxs7sd"]
+
+[ext_resource type="Script" uid="uid://6fahdl4ckoeu" path="res://projectiles/bullet/bullet.gd" id="1_q2kg7"]
+[ext_resource type="Texture2D" uid="uid://biiyoblkeb87l" path="res://projectiles/bullet/Projectile-Fireball.png" id="2_svfm5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h6gl0"]
+radius = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y0yo"]
+atlas = ExtResource("2_svfm5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83ws8"]
+atlas = ExtResource("2_svfm5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw21y"]
+atlas = ExtResource("2_svfm5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhdc3"]
+atlas = ExtResource("2_svfm5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp1h8"]
+atlas = ExtResource("2_svfm5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms702"]
+atlas = ExtResource("2_svfm5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lk4yl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y0yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83ws8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw21y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhdc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp1h8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms702")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 5.0
+}]
+
+[node name="Bullet" type="Area2D"]
+top_level = true
+scale = Vector2(0.15, 0.15)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_q2kg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h6gl0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lk4yl")
+animation = &"fire"

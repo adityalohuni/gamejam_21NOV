@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bm0nv7fl4154i"]
+
+[node name="Scorpion" type="CharacterBody2D"]
